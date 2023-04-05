@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Raleway:wght@200;300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-[Raleway];
+  }
+  /* button {
+    @apply rounded-md border bg-primary px-4 py-2 text-lightgrey;
+  } */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-[Montserrat];
+  }
+}
+
+/* @keyframes liquid {
+  0% {
+    border-radius: 50% 50% 38% 62% / 60% 47% 53% 40%;
+  }
+  50% {
+    border-radius: 58% 42% 56% 44% / 46% 59% 41% 54%;
+  }
+  100% {
+    border-radius: 50% 50% 38% 62% / 60% 47% 53% 40%;
+  }
+}
+
+.liquid {
+  animation: liquid 7s infinite;
+} */
