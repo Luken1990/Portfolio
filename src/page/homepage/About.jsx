@@ -1,12 +1,14 @@
 import React from 'react';
 import * as AiIcons from 'react-icons/ai';
+import * as GrIcons from 'react-icons/gr';
+import { nanoid } from 'nanoid';
 
 export const About = () => {
   const socials = [
-    // {
-    //   icon: <AiIcons.AiOutlineGlobal size={30} />,
-    //   link: '',
-    // },
+    {
+      icon: <GrIcons.GrDocumentPdf size={30} />,
+      link: 'https://drive.google.com/file/d/1EQ4MnqNPCeBmBNWhsWcw1oxPpsA0l0Ot/view?usp=share_link',
+    },
     {
       icon: <AiIcons.AiOutlineLinkedin size={30} />,
       link: 'https://www.linkedin.com/in/luke-nguyen-81337132/',
@@ -49,10 +51,10 @@ export const About = () => {
               Skills
             </h2>
             <div className="mb-8 flex flex-row flex-wrap gap-3 text-sm">
-              {skills.map((skill, index) => {
+              {skills.map((skill) => {
                 return (
                   <span
-                    key={index}
+                    key={nanoid()}
                     className="rounded-md bg-accent px-3 py-1 text-primary "
                   >
                     {skill}
@@ -63,7 +65,12 @@ export const About = () => {
             <div className="flex flex-row gap-4">
               {socials.map(({ icon, link }, index) => {
                 return (
-                  <a target="blank" className="hover:text-accent" href={link}>
+                  <a
+                    key={nanoid()}
+                    target="blank"
+                    className="hover:text-accent"
+                    href={link}
+                  >
                     {icon}
                   </a>
                 );

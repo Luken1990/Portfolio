@@ -3,6 +3,7 @@ import { Portfolio } from './Portfolio';
 import { Hero } from './Hero';
 import { About } from './About';
 import { Design } from './Design';
+import { Contact } from './Contact';
 
 export const WebContext = createContext();
 
@@ -16,6 +17,7 @@ export const Home = () => {
         {webState === 'develop' ? <About /> : null}
         {webState === 'develop' ? <Portfolio /> : <Design />}
       </WebContext.Provider>
+      <Contact/>
     </main>
   );
 };

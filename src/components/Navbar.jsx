@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import * as RxIcons from 'react-icons/rx';
+import { nanoid } from 'nanoid';
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -39,7 +40,7 @@ export const Navbar = () => {
             {navMenu.map(({ menu, link }) => {
               return (
                 <li
-                  key={menu}
+                  key={nanoid()}
                   className=" text-center hover:border-b-2 hover:border-b-accent"
                 >
                   <Link to={link} smooth={true} duration={300} offset={-56}>

@@ -2,6 +2,7 @@ import { Fragment, useRef, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import * as AiIcons from 'react-icons/ai';
 import ReactPlayer from 'react-player/vimeo';
+import { nanoid } from 'nanoid';
 
 export const Aside = ({ content, open, setOpen }) => {
   const cancelButtonRef = useRef(null);
@@ -83,11 +84,11 @@ export const Aside = ({ content, open, setOpen }) => {
                         <h3 className="text-darkestGrey mb-3">Softwares:</h3>
                         <div className="mb-6 flex gap-3">
                           {content.software
-                            ? content.software.map((item, index) => {
+                            ? content.software.map((item) => {
                                 return (
                                   <span
                                     className="text-lightGrey hover:text-darkestGrey text-2xl"
-                                    key={index}
+                                    key={nanoid()}
                                   >
                                     {item}
                                   </span>
@@ -110,6 +111,7 @@ export const Aside = ({ content, open, setOpen }) => {
                               const last = content.images.length - 1;
                               return (
                                 <div
+                                  key={nanoid()}
                                   className={`${
                                     last % 2 === 0 && index === last
                                       ? 'col-span-6'
@@ -130,7 +132,10 @@ export const Aside = ({ content, open, setOpen }) => {
                             {content.videos.map((video) => {
                               console.log(video);
                               return (
-                                <div className="col-span-3 flex bg-black">
+                                <div
+                                  key={nanoid()}
+                                  className="col-span-3 flex bg-black"
+                                >
                                   <ReactPlayer
                                     url={video}
                                     className="h-full w-full"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Aside } from './Aside';
 import { designPortfolio } from './static Data/designPortfolio';
+import { nanoid } from 'nanoid';
 
 export const Design = () => {
   let [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ export const Design = () => {
                 setOpen(true);
                 setContent(item);
               }}
-              key={item.id}
+              key={nanoid()}
               style={{ backgroundImage: `url(${item.coverIMG})` }}
               className={`relative flex h-[50vh] flex-col items-center justify-center bg-cover bg-top text-white
                before:absolute before:h-full before:w-full before:bg-black before:opacity-60 before:duration-500 hover:before:opacity-0

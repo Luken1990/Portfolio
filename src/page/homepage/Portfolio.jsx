@@ -1,6 +1,7 @@
 import React from 'react';
 import { portfolio } from './static Data/developmentProjects';
 import * as BsIcons from 'react-icons/bs';
+import { nanoid } from 'nanoid';
 
 export const Portfolio = () => {
   return (
@@ -16,15 +17,15 @@ export const Portfolio = () => {
               >
                 <div
                   className={`${
-                    isEven ? 'order-first' : 'order-last '
+                    isEven ? 'order-first' : 'order-first sm:order-last '
                   } basis-1/2`}
                 >
                   <h2 className=" mb-8 text-2xl font-semibold">{project}</h2>
                   <p className="mb-4 text-base">{description}</p>
 
                   <div className="mb-8 flex flex-row gap-4">
-                    {stack.map((item, index) => {
-                      return <span key={index}>{item}</span>;
+                    {stack.map((item) => {
+                      return <span key={nanoid()}>{item}</span>;
                     })}
                   </div>
 
@@ -51,6 +52,7 @@ export const Portfolio = () => {
                     ) : null}
                   </div>
                 </div>
+
                 <figure className={`basis-1/2`}>
                   <img src={img} alt="" />
                 </figure>
