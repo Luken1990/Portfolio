@@ -28,7 +28,7 @@ export const Hero = () => {
           type="button"
           // style={{ writingMode: 'vertical-lr' }}
           onClick={handleDesign}
-          className=" translate-x-5 -rotate-90 rounded-tr-md rounded-tl-md bg-accent px-4 py-2"
+          className=" translate-x-[22px] -rotate-90 rounded-tr-md rounded-tl-md bg-accent px-4 py-2"
         >
           Design
         </button>

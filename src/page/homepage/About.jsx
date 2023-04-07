@@ -10,7 +10,7 @@ export const About = () => {
   const socials = [
     {
       icon: <GrIcons.GrDocumentPdf size={30} />,
-      link: 'https://drive.google.com/file/d/1EQ4MnqNPCeBmBNWhsWcw1oxPpsA0l0Ot/view?usp=share_link',
+      link: 'https://drive.google.com/file/d/1X37iiZiNPZ24ei66ySOVtnktZUe-nE-b/view?usp=share_link',
     },
     {
       icon: <AiIcons.AiOutlineLinkedin size={30} />,
