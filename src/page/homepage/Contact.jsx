@@ -11,7 +11,7 @@ export const Contact = () => {
           Get in touch
         </h2>
 
-        <div className="flex flex-col justify-center items-center gap-8 text-sm text-white sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-8 text-sm text-white sm:flex-row">
           <div className="mb-3 flex flex-row items-center gap-3 ">
             <span className="text-accent">
               <HiIcons.HiOutlineLocationMarker size={30} />

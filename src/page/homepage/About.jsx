@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import * as AiIcons from 'react-icons/ai';
 import * as GrIcons from 'react-icons/gr';
+import { WebContext } from './Home';
 import { nanoid } from 'nanoid';
 
 export const About = () => {
+  const [webState, setWebState] = useContext(WebContext);
+
   const socials = [
     {
       icon: <GrIcons.GrDocumentPdf size={30} />,
@@ -19,7 +22,7 @@ export const About = () => {
     },
   ];
 
-  const skills = [
+  const softSkills = [
     'HTML',
     'CSS',
     'JavaScript',
@@ -27,6 +30,8 @@ export const About = () => {
     'TailwindCSS',
     'Git/GitHub',
   ];
+
+  const designSkills = ['LightRoom', 'Photohop', 'InDesign', 'Illustrator'];
 
   return (
     <section id="about" className=" bg-primary">
@@ -36,14 +41,25 @@ export const About = () => {
             <h2 className="mb-10 text-3xl font-semibold leading-6 tracking-wide">
               My Journey
             </h2>
-            <p>
-              Designer turned Developer. As part of my previous job, I created
-              digital assets for websites. Though I enjoyed my work, I always
-              felt that I was missing out on the technical aspect of it. This is
-              what drew me towards coding. As I began to explore coding, I
-              became fascinated with the problem-solving aspect of it and how it
-              allowed me to create things that were not previously possible.
-            </p>
+            {webState === 'develop' ? (
+              <p>
+                Designer turned Developer. As part of my previous job, I created
+                digital assets for websites. Though I enjoyed my work, I always
+                felt that I was missing out on the technical aspect of it. This
+                is what drew me towards coding. As I began to explore coding, I
+                became fascinated with the problem-solving aspect of it and how
+                it allowed me to create things that were not previously
+                possible.
+              </p>
+            ) : (
+              <p>
+                Graphic designer with over 5+ years of experience in the
+                industry. Starting out as a junior designer, I found my passion
+                in designing greeting cards that were sold in renowned stores
+                across the UK. Since then, I have expanded my skills to include
+                product photography, image retouching, and email marketing.
+              </p>
+            )}
           </div>
 
           <div className="flex-1 overflow-hidden rounded-lg ">
@@ -51,16 +67,27 @@ export const About = () => {
               Skills
             </h2>
             <div className="mb-8 flex flex-row flex-wrap gap-3 text-sm">
-              {skills.map((skill) => {
-                return (
-                  <span
-                    key={nanoid()}
-                    className="rounded-md bg-accent px-3 py-1 text-primary "
-                  >
-                    {skill}
-                  </span>
-                );
-              })}
+              {webState === 'develop'
+                ? softSkills.map((skill) => {
+                    return (
+                      <span
+                        key={nanoid()}
+                        className="rounded-md bg-accent px-3 py-1 text-primary "
+                      >
+                        {skill}
+                      </span>
+                    );
+                  })
+                : designSkills.map((skill) => {
+                    return (
+                      <span
+                        key={nanoid()}
+                        className="rounded-md bg-accent px-3 py-1 text-primary "
+                      >
+                        {skill}
+                      </span>
+                    );
+                  })}
             </div>
             <div className="flex flex-row gap-4">
               {socials.map(({ icon, link }, index) => {

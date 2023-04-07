@@ -20,7 +20,7 @@ export const Portfolio = () => {
                     isEven ? 'order-first' : 'order-first sm:order-last '
                   } basis-1/2`}
                 >
-                  <h2 className=" mb-8 text-2xl font-semibold">{project}</h2>
+                  <h3 className=" mb-8 text-2xl font-semibold">{project}</h3>
                   <p className="mb-4 text-base">{description}</p>
 
                   <div className="mb-8 flex flex-row gap-4">

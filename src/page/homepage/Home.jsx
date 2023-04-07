@@ -14,10 +14,10 @@ export const Home = () => {
     <main>
       <WebContext.Provider value={[webState, setWebState]}>
         <Hero />
-        {webState === 'develop' ? <About /> : null}
+        <About />
         {webState === 'develop' ? <Portfolio /> : <Design />}
       </WebContext.Provider>
-      <Contact/>
+      <Contact />
     </main>
   );
 };

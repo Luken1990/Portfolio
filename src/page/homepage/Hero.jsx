@@ -2,8 +2,6 @@ import React, { useState, useContext } from 'react';
 import img from '../../assets/images/Luke_circle.png';
 import { WebContext } from './Home';
 
-import { nanoid } from 'nanoid';
-
 export const Hero = () => {
   const [webState, setWebState] = useContext(WebContext);
 
@@ -20,17 +18,17 @@ export const Hero = () => {
       <div className=" absolute flex h-screen w-full items-center justify-between text-white">
         <button
           type="button"
-          style={{ writingMode: 'vertical-rl' }}
+          // style={{ writingMode: 'vertical-rl' }}
           onClick={handleDevelop}
-          className=" rounded-tr-md rounded-br-md bg-accent px-2 py-4"
+          className=" -translate-x-7 rotate-90 rounded-tr-md rounded-tl-md bg-accent px-4 py-2"
         >
           Develop
         </button>
         <button
           type="button"
-          style={{ writingMode: 'vertical-lr' }}
+          // style={{ writingMode: 'vertical-lr' }}
           onClick={handleDesign}
-          className=" rotate-180 rounded-tr-md rounded-br-md bg-accent px-2 py-4"
+          className=" translate-x-5 -rotate-90 rounded-tr-md rounded-tl-md bg-accent px-4 py-2"
         >
           Design
         </button>

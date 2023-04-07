@@ -10,9 +10,6 @@
   body {
     @apply font-[Raleway];
   }
-  /* button {
-    @apply rounded-md border bg-primary px-4 py-2 text-lightgrey;
-  } */
   h1,
   h2,
   h3,
@@ -21,19 +18,3 @@
     @apply font-[Montserrat];
   }
 }
-
-/* @keyframes liquid {
-  0% {
-    border-radius: 50% 50% 38% 62% / 60% 47% 53% 40%;
-  }
-  50% {
-    border-radius: 58% 42% 56% 44% / 46% 59% 41% 54%;
-  }
-  100% {
-    border-radius: 50% 50% 38% 62% / 60% 47% 53% 40%;
-  }
-}
-
-.liquid {
-  animation: liquid 7s infinite;
-} */

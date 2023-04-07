@@ -29,7 +29,9 @@ export const Navbar = () => {
       <div className=" relative mx-auto sm:container sm:px-4">
         <div className="flex flex-col justify-between sm:flex-row sm:py-4">
           <div className="flex justify-between border border-b-[1px] p-4 font-bold sm:border-none sm:p-0">
-            <h3>Luke.Dev</h3>
+            <Link to="hero">
+              <h3 className=" cursor-pointer">Luke.Dev</h3>
+            </Link>
             <span onClick={() => setOpen(!open)} className="sm:hidden">
               <RxIcons.RxHamburgerMenu size={20} />
             </span>
@@ -41,7 +43,7 @@ export const Navbar = () => {
               return (
                 <li
                   key={nanoid()}
-                  className=" text-center hover:border-b-2 hover:border-b-accent"
+                  className=" cursor-pointer text-center hover:border-b-2 hover:border-b-accent"
                 >
                   <Link to={link} smooth={true} duration={300} offset={-56}>
                     {menu}
