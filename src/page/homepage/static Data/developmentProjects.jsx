@@ -35,7 +35,7 @@ export const portfolio = [
     ],
   },
   {
-    project: 'WeightLifers',
+    project: 'Weight Lifting',
     img: NF,
     gitHub: 'https://github.com/Luken1990/Fitness-Site',
     site: '',
