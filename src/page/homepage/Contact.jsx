@@ -5,13 +5,13 @@ import * as FaIcons from 'react-icons/fa';
 
 export const Contact = () => {
   return (
-    <section id="contact" className="bg-black py-20">
+    <section id="contact" className="bg-white py-20">
       <div className="container mx-auto px-4">
-        <h2 className="mb-10 text-center text-3xl font-semibold leading-6 tracking-wide text-white">
+        <h2 className="mb-10 text-center text-3xl font-semibold leading-6 tracking-wide text-black">
           Get in touch
         </h2>
 
-        <div className="flex flex-col items-center justify-center gap-8 text-sm text-white sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-8 text-sm text-black sm:flex-row">
           <div className="mb-3 flex flex-row items-center gap-3 ">
             <span className="text-accent">
               <HiIcons.HiOutlineLocationMarker size={30} />

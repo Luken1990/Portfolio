@@ -2,11 +2,15 @@ import React from 'react';
 import { portfolio } from './static Data/developmentProjects';
 import * as BsIcons from 'react-icons/bs';
 import { nanoid } from 'nanoid';
+import { OtherProject } from './OtherProject';
 
 export const Portfolio = () => {
   return (
     <section id="portfolio">
       <div className="container mx-auto px-4 py-20">
+        <p className="text-center text-sm text-slate-400">Browse my recent</p>
+        <h2 className="text-center text-3xl font-semibold">Projects</h2>
+
         {portfolio.map(
           ({ project, img, gitHub, site, description, stack }, index) => {
             const isEven = index % 2 === 0;
@@ -20,7 +24,7 @@ export const Portfolio = () => {
                     isEven ? 'order-first' : 'order-first sm:order-last '
                   } basis-1/2`}
                 >
-                  <h3 className=" mb-8 text-2xl font-semibold">{project}</h3>
+                  <h3 className=" mb-4 text-lg font-semibold">{project}</h3>
                   <p className="mb-4 text-base">{description}</p>
 
                   <div className="mb-8 flex flex-row gap-4">
@@ -61,6 +65,7 @@ export const Portfolio = () => {
           }
         )}
       </div>
+      <OtherProject />
     </section>
   );
 };
