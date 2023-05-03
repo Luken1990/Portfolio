@@ -32,8 +32,11 @@ export const OtherProject = () => {
           >
             {otherProjects.map(({ img, gitHub, site, project }) => {
               return (
-                <motion.div key={nanoid()} className="h-full min-w-[33%]">
-                  <figure className='rounded-xl overflow-hidden'>
+                <motion.div
+                  key={nanoid()}
+                  className="h-full min-w-[100%]  sm:min-w-[calc(50%-16px)]  md:min-w-[calc(33.33%-32px)] "
+                >
+                  <figure className="overflow-hidden rounded-xl">
                     <img
                       className="pointer-events-none h-full w-full object-cover"
                       src={img}
