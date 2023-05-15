@@ -22,7 +22,7 @@ export const otherProjects = [
   {
     project: 'TodoLi',
     img: TodoLi,
-    gitHub: 'https://github.com/Luken1990/bloggIn',
+    gitHub: 'https://github.com/Luken1990/TodoLi',
     site: '',
     description: `Full-stack web application designed to help users manage their daily tasks efficiently. The application allows users to create an account, log in, and create, edit, and delete tasks. JWT authentication is used to ensure secure user authentication and access control to the application`,
     stack: [
