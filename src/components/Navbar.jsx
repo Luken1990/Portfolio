@@ -30,7 +30,7 @@ export const Navbar = () => {
         <div className="flex flex-col justify-between sm:flex-row sm:py-4">
           <div className="flex justify-between border border-b-[1px] p-4 font-bold sm:border-none sm:p-0">
             <Link to="hero">
-              <h3 className=" cursor-pointer">Luke.Dev</h3>
+              <h3 className=" cursor-pointer">Luke.D</h3>
             </Link>
             <span onClick={() => setOpen(!open)} className="sm:hidden">
               <RxIcons.RxHamburgerMenu size={20} />

@@ -8,7 +8,7 @@ import { Contact } from './Contact';
 export const WebContext = createContext();
 
 export const Home = () => {
-  const [webState, setWebState] = useState('develop');
+  const [webState, setWebState] = useState('design');
 
   return (
     <main>

@@ -10,7 +10,7 @@ import {
 
 export const Hero = () => {
   const [webState, setWebState] = useContext(WebContext);
-  const [role, setRole] = useState('Front End Developer');
+  const [role, setRole] = useState('Graphic Designer');
 
   const handleDesign = () => {
     setWebState('design');
